@@ -8,18 +8,15 @@ import lombok.ToString;
 @Builder
 @ToString
 public class PartnerCommand {
+    private final String partnerName;
+    private final String businessNo;
+    private final String email;
 
-  private final String partnerName;
-  private final String businessNo;
-  private final String email;
-
-  public Partner toEntity() {
-    var initPartner = Partner.builder()
-        .partnerName(partnerName)
-        .businessNo(businessNo)
-        .email(email)
-        .build();
-
-    return initPartner;
-  }
+    public Partner toEntity() {
+        return Partner.builder()
+                .partnerName(partnerName)
+                .businessNo(businessNo)
+                .email(email)
+                .build();
+    }
 }

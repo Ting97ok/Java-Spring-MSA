@@ -1,7 +1,5 @@
 package dev.practice.order.domain.partner;
 
 public interface PartnerStore {
-
-  Partner store(Partner partner);
-
+    Partner store(Partner initPartner);
 }
